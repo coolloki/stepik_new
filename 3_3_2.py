@@ -18,8 +18,8 @@ class TestRegistration(unittest.TestCase):
         email.send_keys('i.shmidt@gmailk.com')
         button = browser.find_element(By.CSS_SELECTOR, 'button.btn')
         button.click()
-        rigth_answer = 'Congratulations! You have successfully registered!'
-        answer = WebDriverWait(browser, 5).until(EC.text_to_be_present_in_element((By.TAG_NAME, 'h1'), rigth_answer))
+        right_answer = 'Congratulations! You have successfully registered!'
+        answer = WebDriverWait(browser, 5).until(EC.text_to_be_present_in_element((By.TAG_NAME, 'h1'), right_answer))
         self.assertIsNotNone(answer, 'Test not pass')
         browser.quit()
 
